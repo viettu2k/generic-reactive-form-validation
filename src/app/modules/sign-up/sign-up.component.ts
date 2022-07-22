@@ -59,7 +59,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
     // Merge the blur event observable with the valueChanges observable
     merge(this.signupForm.valueChanges, ...controlBlurs)
       .pipe(debounceTime(800))
-      .subscribe((value) => {
+      .subscribe(() => {
         this.displayMessage = this.genericValidator.processMessages(
           this.signupForm
         );

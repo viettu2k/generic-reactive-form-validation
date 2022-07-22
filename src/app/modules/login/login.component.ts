@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
     // Merge the blur event observable with the valueChanges observable
     merge(this.loginForm.valueChanges, ...controlBlurs)
       .pipe(debounceTime(800))
-      .subscribe((value) => {
+      .subscribe(() => {
         this.displayMessage = this.genericValidator.processMessages(
           this.loginForm
         );
