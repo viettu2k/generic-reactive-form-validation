@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 import { PasswordMatcher } from "../../shared/password-matcher";
@@ -22,9 +21,9 @@ export class SignUpComponent implements OnInit {
       {
         firstName: ["", [Validators.required]],
         lastName: ["", [Validators.required]],
-        email: ["", [Validators.required], Validators.email],
+        email: ["", [Validators.required, Validators.email]],
         password: ["", [Validators.required, Validators.minLength(8)]],
-        confirmPassword: ["", [Validators.required]],
+        confirmPassword: ["", Validators.required],
       },
       { validator: PasswordMatcher.match }
     );
