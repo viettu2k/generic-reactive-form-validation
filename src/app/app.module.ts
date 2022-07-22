@@ -6,10 +6,11 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./modules/login/login.component";
 import { SignUpComponent } from "./modules/sign-up/sign-up.component";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, SignUpComponent],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [CommonModule, BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

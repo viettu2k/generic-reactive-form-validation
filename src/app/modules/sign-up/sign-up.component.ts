@@ -10,7 +10,7 @@ import {
   FormBuilder,
   Validators,
   FormControlName,
-  AbstractControl,
+  // AbstractControl,
 } from "@angular/forms";
 import { Observable, fromEvent, merge } from "rxjs";
 import { debounceTime } from "rxjs/operators";
@@ -22,7 +22,7 @@ import { PasswordMatcher } from "../../shared/password-matcher";
   templateUrl: "./sign-up.component.html",
   styleUrls: ["./sign-up.component.scss"],
 })
-export class SignUpComponent implements OnInit {
+export class SignUpComponent implements OnInit, AfterViewInit {
   // Access every form input fields in our signup html file
   @ViewChildren(FormControlName, { read: ElementRef })
   formInputElements: ElementRef[];
